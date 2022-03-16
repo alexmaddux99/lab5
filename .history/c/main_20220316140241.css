@@ -84,10 +84,8 @@ iframe {
 }
 
 #vid_controls{
-  background-color:rgba(99, 77, 55, .5);
+  background-color:rgba(99, 77, 55, .5); ;
 }
-
-
 
 .hide {
   opacity:0;

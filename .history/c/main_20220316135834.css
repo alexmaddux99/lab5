@@ -83,11 +83,11 @@ iframe {
   transition: all .1s;
 }
 
-#vid_controls{
-  background-color:rgba(99, 77, 55, .5);
+input[type="image"]
+{
+  position: absolute;
+ 
 }
-
-
 
 .hide {
   opacity:0;

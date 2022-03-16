@@ -76,32 +76,24 @@
 				
 			</video>
 
-			<div id="vid_controls">
-				
-						<input type="image" title="Play" src="images/play.png" id="play_button" onclick="playVideo(vid)" />
-						<input type="image" title="Pause" src="images/pause.png" id="pause_button" onclick="pauseVideo(vid)" value="Pause" />
-						<input type="image" title="Restart" src="images/restart.png" id="rewind" onclick="seekVideo(vid, 0)" value="Beginning" />
-						<input type="image" title="Skip To End" src="images/end.png" id="end" onclick="seekVideo(vid, 114)" value="End" />
-						<input type="image" title="Mute" src="images/mute.png" id="mute" onclick="muteVid(vid)" value="Mute" />
-						<input type="image" title="Unmute" src="images/unmute.png" id="unmute" onclick="unmuteVid(vid)" value="Unmute" />
-						<input type="range" title="Volume" id="change_vol" onchange="change_vol(vid)" step="0.05" min="0" max="1" value="1">
-						
+			<div id="video_controls">
+				<fieldset>
+						<input type="image" src="images/play.png" id="play_button" onclick="playVideo(vid)" />
+						<input type="image" src="images/pause.png" id="pause_button" onclick="pauseVideo(vid)" value="Pause" />
+						<input type="image" src="images/restart.png" id="rewind" onclick="seekVideo(vid, 0)" value="Beginning" />
+						<input type="image" src="images/end.png" id="end" onclick="seekVideo(vid, 114)" value="End" />
+						<input type="image" src="images/mute.png" id="mute" onclick="muteVid(vid)" value="Mute" />
+						<input type="image" src="images/unmute.png" id="unmute" onclick="unmuteVid(vid)" value="Unmute" />
+				</fieldset>
 			</div>
 		</div>
 
 
-			<div id="chapters">
+			<div id="controls">
 				<fieldset>
+						<input type="range" id="change_vol" onchange="change_vol(vid)" step="0.05" min="0" max="1" value="1">
 						<input type="button" id="seek" onclick="seekVideo(vid, 14)" value="What you need" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 28)" value="Step 1" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 38.5)" value="Step 2" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 51)" value="Step 3" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 57)" value="Step 4" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 69.5)" value="Tip" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 74)" value="Step 5" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 87)" value="Step 6" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 96.3)" value="Step 7" />
-						<input type="button" id="seek" onclick="seekVideo(vid, 102)" value="Did You Know?" />
+						<input type="button" id="seek" onclick="seekVideo(vid, 29)" value="Step 1" />
 					</fieldset>
 					
 					<fieldset>
@@ -113,10 +105,12 @@
 						</select>
 					</fieldset>
 					<fieldset>
-						Playback Speed <br>
-						<input type="image" title="Fast forward" src="images/fastforward.png" id="ff" onclick="playRate(vid,2)" value="fast forward >>" />
-						<input type="image" title="Slowmo"src="images/slowmo.png" id="slo" onclick="playRate(vid,.5)" value="slo mo >" />
-						<input type="image" title="Normal" src="images/play.png" id="normal" onclick="playRate(vid,1)" value="normal >" />
+						<label>Currently, rewind only works in Safari
+							<input type=button id="rw" onclick="playRate(vid,-1)" value="&lt; &lt;rewind" />
+						</lable>
+						<input type=button id="ff" onclick="playRate(vid,2)" value="fast forward >>" />
+						<input type=button id="slo" onclick="playRate(vid,.5)" value="slo mo >" />
+						<input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
 					</fieldset>
 				</form>
 			</div>

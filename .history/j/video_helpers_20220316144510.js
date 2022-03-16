@@ -4,7 +4,8 @@
  * by Troy Bennett 7-2010
  *
  */
- 
+ const progress = document.getElementById("progress");
+ const timer = document.getElementById("timer");
 
 	function selectVideo(e, clip) 
 	{
@@ -50,7 +51,13 @@
  clip.volume=document.getElementById("change_vol").value;
 }
 
-  
+function progressLoop() {
+	setInterval(function () {
+	  progress.value = Math.round((video.currentTime / video.duration) * 100);
+	  timer.innerHTML = Math.round(video.currentTime) + " seconds";
+	});
+  }
+  video.addEventListener("play", progressLoop);
 
 
 	// rate can be a positive integer

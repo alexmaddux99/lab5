@@ -87,7 +87,46 @@ iframe {
   background-color:rgba(99, 77, 55, .5);
 }
 
+progress[value] {
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0,.25) inset;
+  color: dodgerblue;
+  display: inline;
+  height: 15px;
+  order: 1;
+  position: relative;
+  width: 100%;
+}
 
+/* WebKit styles */
+progress[value]::-webkit-progress-bar {
+  background-color: whiteSmoke;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0,.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-image: linear-gradient(
+    to right,
+    #ff8a00, #e52e71
+  );
+  border-radius: 3px;
+  position: relative;
+  transition: width 1s linear;
+}
+
+/* Firefox styles */
+progress[value]::-moz-progress-bar {
+  background-image: -moz-linear-gradient(
+    to right,
+    #ff8a00, #e52e71
+  );
+  border-radius: 3px;
+  position: relative;
+  transition: width 1s linear;
+}
 
 .hide {
   opacity:0;

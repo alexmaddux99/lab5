@@ -59,6 +59,9 @@ iframe {
   display:table-row;
 }
 
+#container1{
+  position: absolute;
+}
 
 /* show the timings in square brackets before each "subtitle" in the transcript. */
 #transcript [data-begin]:before {
@@ -81,10 +84,6 @@ iframe {
 	z-index:3;
   opacity: 1;
   transition: all .1s;
-}
-
-#vid_controls{
-  background-color:rgba(99, 77, 55, .5);
 }
 
 

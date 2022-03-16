@@ -22,7 +22,10 @@ h1 {
 }
 
 
-
+#vid {
+	width:352px;
+	height:288px;
+}
 
 .col1 {
 	border:1px solid black;
@@ -60,6 +63,7 @@ iframe {
 }
 
 
+
 /* show the timings in square brackets before each "subtitle" in the transcript. */
 #transcript [data-begin]:before {
   content: " [" attr(data-begin) "s-" attr(data-end)"s]   "; 
@@ -81,10 +85,6 @@ iframe {
 	z-index:3;
   opacity: 1;
   transition: all .1s;
-}
-
-#vid_controls{
-  background-color:rgba(99, 77, 55, .5);
 }
 
 

@@ -4,7 +4,7 @@
  * by Troy Bennett 7-2010
  *
  */
- 
+
 
 	function selectVideo(e, clip) 
 	{
@@ -47,11 +47,8 @@
 
 	function change_vol(clip)
 {
- clip.volume=document.getElementById("change_vol").value;
+ player.volume=document.getElementById("change_vol").value;
 }
-
-  
-
 
 	// rate can be a positive integer
 	// .5 is half speed, 1 is normal speed,

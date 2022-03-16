@@ -49,7 +49,14 @@
 {
  clip.volume=document.getElementById("change_vol").value;
 }
-
+const progress = document.getElementById("progress");
+ const timer = document.getElementById("timer");
+function progressLoop(clip) {
+	setInterval(function () {
+	  clip.value = Math.round((video.currentTime / video.duration) * 100);
+	  timer.innerHTML = Math.round(video.currentTime) + " seconds"(clip);
+	});
+  }
   
 
 
