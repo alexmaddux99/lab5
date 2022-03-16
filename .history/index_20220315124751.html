@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>HTML5 Video with JS synchronized cuepoints: demo</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="c/main.css" />
+	<script src="j/video_helpers.js" defer></script>
+	<script type="module" src="j/main.js" defer></script>
+
+</head>
+
+<body>
+	<h1>HTML5 Video with JS synchronized cuepoints: demo</h1>
+
+	<main id="container">
+
+		<section class="col1">
+
+			<video id="vid" width="352" controls>
+				<source src="assets/How to Get a Free Meal.mp4" type="video/mp4" />
+				<source src="assets/How to Get a Free Meal.webm" type="video/webm" />
+				<source src="assets/How to Get a Free Meal-(144p).3gp" type="video/3gp" />
+				<track kind="captions" label="On" srclang="en" src="../captions/[English]How to Get a Free Meal[Checksub.com].srt" default />
+
+				<!-- final fallback to text -->
+				<h2>How to leverage a synergy</h2>
+				<p>Hi, my name's Dr Archimedes Einstein and I'm a Doctor of Science at the University of Science in a
+					very famous town that you're too stupid to have heard of. Anyway, today we're going to talk about
+					"synergies". A lot of people are worried about synergies, but I can tell you that statistics show
+					there is no danger of increased cancer risk from synergies. However, it's better to be safe than
+					sorry. I'm going to demonstrate how you how we can leverage a synergy.
+				</p>
+				<p>First of all, I've got this banana. This banana represents "Web 2.0" and look, I've written on it
+					some "user-generated content" just to prove the point [LOL, WTF, You suck]. I take my "Web 2.0" and
+					I put it in an envelope marked "paradigm shift". OK. Very important, I put the envelope down and
+					With a bit of "blue sky thinking", I "push the envelope". Then, I take my leverage mallet, and URGH!
+					GRRAHH!! YARRRR!!!! ...and there we can see a synergy, leveraged.
+				</p>
+			</video>
+
+
+			<div id="controls">
+				<form id="video_form">
+					<fieldset>
+						<input type="button" id="play_button" onclick="playVideo(vid)" value="Play" />
+						<input type="button" id="pause_button" onclick="pauseVideo(vid)" value="Pause" />
+						<input type="button" id="mute" onclick="muteVid(vid)" value="Mute" />
+						<input type="button" id="unmute" onclick="unmuteVid(vid)" value="Unmute" />
+						<input type="button" id="rewind" onclick="seekVideo(vid, 0)" value="Beginning" />
+						<input type="button" id="end" onclick="seekVideo(vid, 57)" value="End" />
+						<input type="button" id="seek" onclick="seekVideo(vid, 14)" value="Go to Statistics" />
+					</fieldset>
+					<fieldset>
+						<select id="video_select">
+							<option>Select a video to play...</option>
+							<option value="assets/How to Get a Free Meal.mp4">How To Get A Free Meal(mp4)</option>
+							<option value="assets/How to Get a Free Meal.webm">How To Get A Free Meal(webm)</option>
+							<option value="assets/How to Get a Free Meal-(144p).3gp">How To Get A Free Meal(3gp)</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<label>Currently, rewind only works in Safari
+							<input type=button id="rw" onclick="playRate(vid,-1)" value="&lt; &lt;rewind" />
+						</lable>
+						<input type=button id="ff" onclick="playRate(vid,2)" value="fast forward >>" />
+						<input type=button id="slo" onclick="playRate(vid,.5)" value="slo mo >" />
+						<input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
+					</fieldset>
+				</form>
+			</div>
+
+			<div class="pop hide">
+				<p>Test This!</p>
+			</div>
+		</section>
+
+		<section class="col2">
+			<iframe id="web" src=""></iframe>
+		</section>
+
+	</main>
+
+</body>
+</html>

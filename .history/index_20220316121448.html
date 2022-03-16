@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>HTML5 Video with JS synchronized cuepoints: demo</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="c/main.css" />
+	<script src="j/video_helpers.js" defer></script>
+	<script type="module" src="j/main.js" defer></script>
+
+</head>
+
+<body>
+	<h1>HTML5 Video with JS synchronized cuepoints: demo</h1>
+
+	<main id="container">
+
+		<section class="col1">
+
+			<video id="vid" width="352" controls>
+				<source src="assets/How to Get a Free Meal.mp4" type="video/mp4" />
+				<source src="assets/How to Get a Free Meal.webm" type="video/webm" />
+				<source src="assets/How to Get a Free Meal-(144p).3gp" type="video/3gp" />
+				<track kind="captions" label="On" srclang="en" src="./captions/freemeal.vtt" default />
+
+				<!-- final fallback to text -->
+				<h2>How to Get a Free Meal.</h2>
+				<p>Even if your options are limited and your pockets are turned inside out, you can still
+				rustle up some grub.
+
+				Consider several ways to feed yourself without begging or stealing.
+				You will need Fast food shops Grocery store coupons Local bars with happy hours Nature
+				preserves Public functions Restaurants Charitable organizations and blood drives.
+				
+				<h1>Step 1.</h1>
+				
+				Find or ask for free meal coupons from Mcdonald's, the Cracker Barrel, and other restaurants.
+				Look for scratch-off cards and contests to win free food.
+
+				<h1>Step 2.</h1>
+
+				Search for local restaurants that offer free birthday meals -- usually supplied only if
+				you are accompanied by a friend who buys their own.
+				Some honor veterans, women, and seniors on certain days of the year.
+
+				<h1>Step 3.</h1>
+
+				Hang out at bars during happy hour.
+				Buy a cheap drink for the opportunity to feast for a couple hours.
+
+				<h1>Step 4.</h1>
+
+				Crash wedding receptions, wakes, church functions, company picnics, and public promotional giveaways.
+				Tour major food stores on weekends for promotional sample displays that might comprise a full
+				meal when you're done.
+				Stick around a friend's home until you overstay your welcome or clean out their pantry.
+
+				<h1>Step 5.</h1>
+
+				Volunteer to help a charitable organization and you can usually get fed, because there
+				is no other pay.
+				Donate blood, as well, for which you will be given sustenance afterward, and still feel
+				good about what you've done to help others.
+
+				<h1>Step 6.</h1>
+
+				Scavenge in the woods for wild edibles that you can take home, and cook.
+				Hunt for game if you don't mind cleaning and cooking it.
+
+				<h1>Step 7.</h1>
+				
+				Grow your own garden to get quality, fresh, and safe food at little cost.
+				Did you know As of 2008, Americans waste 27 percent of consumables every year, or 30 million
+				tons of food, as recently as 2008.</p>
+				
+			</video>
+
+
+			<div id="controls">
+				<form id="video_form">
+					<fieldset>
+						<input type="image" src="/images/play-icon.png" onclick="playVid(vid)">
+						<input type="button" id="seek" onclick="seekVideo(vid, 14)" value="What you need" />
+						<input type="button" id="seek" onclick="seekVideo(vid, 29)" value="Step 1" />
+					</fieldset>
+					<fieldset>
+						<select id="video_select">
+							<option>Select a video to play...</option>
+							<option value="assets/How to Get a Free Meal.mp4">How To Get A Free Meal(mp4)</option>
+							<option value="assets/How to Get a Free Meal.webm">How To Get A Free Meal(webm)</option>
+							<option value="assets/How to Get a Free Meal-(144p).3gp">How To Get A Free Meal(3gp)</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<label>Currently, rewind only works in Safari
+							<input type=button id="rw" onclick="playRate(vid,-1)" value="&lt; &lt;rewind" />
+						</lable>
+						<input type=button id="ff" onclick="playRate(vid,2)" value="fast forward >>" />
+						<input type=button id="slo" onclick="playRate(vid,.5)" value="slo mo >" />
+						<input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
+					</fieldset>
+				</form>
+			</div>
+
+			<div class="pop hide">
+				<p>Test This!</p>
+			</div>
+		</section>
+
+		<section class="col2">
+			<iframe id="web" src=""></iframe>
+		</section>
+
+	</main>
+
+</body>
+</html>
