@@ -61,7 +61,7 @@ iframe {
 }
 
 video{
-  width: 300px;
+  max-width: auto;
   display: block;
   margin: 0 auto;
   background-color: transparent;

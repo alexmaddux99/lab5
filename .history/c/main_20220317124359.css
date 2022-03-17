@@ -61,7 +61,7 @@ iframe {
 }
 
 video{
-  width: 300px;
+  width: 200px;
   display: block;
   margin: 0 auto;
   background-color: transparent;
@@ -100,7 +100,7 @@ fieldset{
   border: none;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
   video{
       width: 720px;
   }

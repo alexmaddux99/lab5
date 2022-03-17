@@ -4,8 +4,7 @@
 <head>
 	<title>How To Get A Free Meal</title>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="c/main.css" />
 	<script src="j/video_helpers.js" defer></script>
 	<script type="module" src="j/main.js" defer></script>
@@ -13,14 +12,13 @@
 </head>
 
 <body>
-	<main id="container">
 	<h1>How To Get A Free Meal</h1>
 
-	
-		<div class="vid-background">
+	<main id="container">
+
 		<section class="col1">
 			
-			<video id="vid">
+			<video id="vid" width="720px">
 				<source src="assets/How to Get a Free Meal.mp4" type="video/mp4" />
 				<source src="assets/How to Get a Free Meal.webm" type="video/webm" />
 				<source src="assets/How to Get a Free Meal-(144p).3gp" type="video/3gp" />
@@ -77,7 +75,7 @@
 				tons of food, as recently as 2008.</p>
 				
 			</video>
-		</div>
+
 			<div id="vid_controls">
 				
 						<input type="image" title="Play" src="images/play.png" id="play_button" onclick="playVideo(vid)" />
@@ -93,8 +91,7 @@
 
 
 			<div id="chapters">
-				<fieldset>
-						<h2>Chapters</h2>
+				
 						<input type="button" id="seek" onclick="seekVideo(vid, 14)" value="What you need" />
 						<input type="button" id="seek" onclick="seekVideo(vid, 28)" value="Step 1" />
 						<input type="button" id="seek" onclick="seekVideo(vid, 38.5)" value="Step 2" />
@@ -105,24 +102,26 @@
 						<input type="button" id="seek" onclick="seekVideo(vid, 87)" value="Step 6" />
 						<input type="button" id="seek" onclick="seekVideo(vid, 96.3)" value="Step 7" />
 						<input type="button" id="seek" onclick="seekVideo(vid, 102)" value="Did You Know?" />
-					</fieldset>
 					
-					<fieldset>
-						Select Format <br>
+					
+					
 						<select id="video_select">
 							<option>Select a video to play...</option>
 							<option value="assets/How to Get a Free Meal.mp4">How To Get A Free Meal(mp4)</option>
 							<option value="assets/How to Get a Free Meal.webm">How To Get A Free Meal(webm)</option>
 							<option value="assets/How to Get a Free Meal-(144p).3gp">How To Get A Free Meal(3gp)</option>
 						</select>
-					</fieldset>
-					<fieldset>
+					
 						Playback Speed <br>
 						<input type="image" title="Fast forward" src="images/fastforward.png" id="ff" onclick="playRate(vid,2)" value="fast forward >>" />
 						<input type="image" title="Slowmo"src="images/slowmo.png" id="slo" onclick="playRate(vid,.5)" value="slo mo >" />
 						<input type="image" title="Normal" src="images/play.png" id="normal" onclick="playRate(vid,1)" value="normal >" />
-					</fieldset>
+					
 				</form>
+			</div>
+
+			<div class="pop hide">
+				<p>Test This!</p>
 			</div>
 		</section>
 

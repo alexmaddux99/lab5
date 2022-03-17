@@ -5,7 +5,7 @@
 
 body {
   font-family: sans-serif;
-  
+  background: rgb(204, 219, 240);
 }
 
 h1 {
@@ -13,19 +13,17 @@ h1 {
 }
  
 #container {
-  padding: 2rem;
-  background-color:#6699CC;
+  border: solid 2px;
   position: relative;
   margin:auto;
   max-width: 1024px;
-  border-radius: 25px;
 }
 
 
 
 
 .col1 {
-	background-color: black;
+	
   height: fit-content;
 }
  
@@ -61,10 +59,8 @@ iframe {
 }
 
 video{
-  width: 300px;
   display: block;
   margin: 0 auto;
-  background-color: transparent;
 }
 
 /* show the timings in square brackets before each "subtitle" in the transcript. */
@@ -77,19 +73,15 @@ video{
 
 
 #chapters{
-  border-bottom: solid 2px;
-  text-align: center;
+  border-bottom: 0 auto;
 }
 
 #vid_controls{
-  text-align: center;
-  background-color: gray;
+  
+  background-color:black;
 }
 
-#vid-background{
-  background-color: black;
-  
-}
+
 
 .hide {
   opacity:0;
@@ -100,13 +92,8 @@ fieldset{
   border: none;
 }
 
-@media only screen and (min-width: 900px) {
-  video{
-      width: 720px;
+@media screen and (max-width:600px) {
+  #container {
+    grid-template-columns: 1fr;
   }
-  
-  body{
-    padding: 2rem;
-    margin: 1rem;
-  }
-  }
+}

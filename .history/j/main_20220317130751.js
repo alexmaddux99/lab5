@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
         { seconds: 28, callback: func1 },
         { seconds: 38, callback: func2 },
         { seconds: 52, callback: func3 },
-        { seconds: 97, callback: func4 },
-        
+        { seconds: 25, callback: func6 },
+        { seconds: 37, callback: func4 },
+        { seconds: 50, callback: func5 },
     ];
 
     cueTimer.setup("vid", myCues);

@@ -15,11 +15,12 @@ import { cueTimer } from "./modules/cuepoints.js";
 document.addEventListener("DOMContentLoaded", (e) => {
 
     var myCues = [
-        { seconds: 28, callback: func1 },
+        { seconds: 31, callback: func1 },
         { seconds: 38, callback: func2 },
-        { seconds: 52, callback: func3 },
-        { seconds: 97, callback: func4 },
-        
+        { seconds: 50, callback: func3 },
+        { seconds: 25, callback: func6 },
+        { seconds: 37, callback: func4 },
+        { seconds: 50, callback: func5 },
     ];
 
     cueTimer.setup("vid", myCues);
@@ -56,7 +57,14 @@ function func3() {
 
 function func4() {
     document.querySelector("#web").src =
-        "https://blog.nationwide.com/tips-for-planting-garden/";
+        "https://en.wikipedia.org/wiki/Paradigm_shift";
 }
 
+function func5() {
+    document.querySelector("#web").src =
+        "https://en.wikipedia.org/wiki/Domestic_violence";
+}
 
+function func6() {
+    document.querySelector("#web").src = "images/koljr-banana-splits-400.jpg";
+}

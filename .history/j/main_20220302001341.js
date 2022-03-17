@@ -15,11 +15,12 @@ import { cueTimer } from "./modules/cuepoints.js";
 document.addEventListener("DOMContentLoaded", (e) => {
 
     var myCues = [
-        { seconds: 28, callback: func1 },
-        { seconds: 38, callback: func2 },
-        { seconds: 52, callback: func3 },
-        { seconds: 97, callback: func4 },
-        
+        { seconds: 2, callback: func1 },
+        { seconds: 9, callback: func2 },
+        { seconds: 15, callback: func3 },
+        { seconds: 25, callback: func6 },
+        { seconds: 37, callback: func4 },
+        { seconds: 50, callback: func5 },
     ];
 
     cueTimer.setup("vid", myCues);
@@ -39,24 +40,40 @@ document.addEventListener("DOMContentLoaded", (e) => {
 //You can code up whatever behavior you need in your own callbacks
 
 function func1() {
-    document.querySelector("#web").src =
-        "https://www.dictionary.com/browse/coupon";
+    document.querySelector("#vid").style = "outline : 10px solid red";
 }
 
 function func2() {
-    document.querySelector("#web").src =
-        "https://spoonuniversity.com/lifestyle/free-food-on-your-birthday-chain-restaurants-that-offer";
+    let pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Ohh Snap!</p>";
+    document.querySelector(".pop").classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
 }
 
 function func3() {
-    
+    const pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>E=MC<sup>2</sup> is NOT Statistical Data!!</p>";
+    pop.classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
+    document.querySelector("#vid").style = "outline: 0px solid red";
     document.querySelector("#web").src =
-        "https://www.merriam-webster.com/dictionary/happy%20hour";
+        "https://en.wikipedia.org/wiki/Albert_Einstein";
 }
 
 function func4() {
     document.querySelector("#web").src =
-        "https://blog.nationwide.com/tips-for-planting-garden/";
+        "https://en.wikipedia.org/wiki/Paradigm_shift";
 }
 
+function func5() {
+    document.querySelector("#web").src =
+        "https://en.wikipedia.org/wiki/Domestic_violence";
+}
 
+function func6() {
+    document.querySelector("#web").src = "images/koljr-banana-splits-400.jpg";
+}
