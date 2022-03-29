@@ -20,9 +20,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         { seconds: 52, callback: func3 },
         { seconds: 97, callback: func4 },
         { seconds: 57,  callback: func5 },
-        { seconds: 75,  callback: func6 },
-        { seconds: 88,  callback: func7 },
-
     ];
 
     cueTimer.setup("vid", myCues);
@@ -65,14 +62,4 @@ function func4() {
 function func5() {
     document.querySelector("#web").src =
         "https://www.allrecipes.com/article/best-grocery-store-free-samples/";
-}
-
-function func6() {
-    document.querySelector("#web").src =
-        "https://www.merriam-webster.com/dictionary/soup%20kitchen";
-}
-
-function func7() {
-    document.querySelector("#web").src =
-        "https://morningchores.com/edible-wild-plants/";
 }

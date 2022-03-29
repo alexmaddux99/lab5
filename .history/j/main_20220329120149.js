@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         { seconds: 97, callback: func4 },
         { seconds: 57,  callback: func5 },
         { seconds: 75,  callback: func6 },
-        { seconds: 88,  callback: func7 },
+        { seconds: 88,  callback: func6 },
 
     ];
 
@@ -74,5 +74,5 @@ function func6() {
 
 function func7() {
     document.querySelector("#web").src =
-        "https://morningchores.com/edible-wild-plants/";
+        "https://www.merriam-webster.com/dictionary/soup%20kitchen";
 }

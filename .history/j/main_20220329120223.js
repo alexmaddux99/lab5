@@ -74,5 +74,5 @@ function func6() {
 
 function func7() {
     document.querySelector("#web").src =
-        "https://morningchores.com/edible-wild-plants/";
+        "https://www.mossyoak.com/edible-plants";
 }

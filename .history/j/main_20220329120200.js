@@ -74,5 +74,5 @@ function func6() {
 
 function func7() {
     document.querySelector("#web").src =
-        "https://morningchores.com/edible-wild-plants/";
+        "https://www.merriam-webster.com/dictionary/soup%20kitchen";
 }
